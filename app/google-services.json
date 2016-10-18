@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "125418103116",
+    "firebase_url": "https://take-care-b543b.firebaseio.com",
+    "project_id": "take-care-b543b",
+    "storage_bucket": "take-care-b543b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125418103116:android:f12bf3a967196a58",
+        "android_client_info": {
+          "package_name": "com.example.goku.firebasecheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125418103116-cf9pr7gv1gcp0rijbf2gm3ai9nq6pd4g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.goku.firebasecheck",
+            "certificate_hash": "3FD4FA4CAD0FAD804F0D44EF630328BA060D1C7F"
+          }
+        },
+        {
+          "client_id": "125418103116-vt5m02agq11cec6jms57pj83nvk5ddue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs78e7snsQ0AICvPqSLili9HsBNHg2Ik0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125418103116-vt5m02agq11cec6jms57pj83nvk5ddue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
