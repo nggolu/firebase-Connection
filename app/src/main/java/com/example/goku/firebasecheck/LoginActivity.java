@@ -1,5 +1,6 @@
 package com.example.goku.firebasecheck;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -70,22 +71,32 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
 
-        String email = Email.getText().toString();
-        String password = Password.getText().toString();
+        final String email = Email.getText().toString();
+        final String password = Password.getText().toString();
         Log.d("Filter",email + " " +password);
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d("Filter","Inside onClick");
-                        Log.d("Filter", "createUserWithEmail:onComplete:" + task.isSuccessful());
+                        Log.d("Filter", "signInWithEmail:onComplete:" + task.isSuccessful());
+
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
+                        Log.d("Filter", "hello "+email+" pass "+ password +" " + task.isSuccessful());
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Login Failed!",
+                            Log.w("Filter", "signInWithEmail:failed", task.getException());
+                            Toast.makeText(LoginActivity.this, "enter vaild authentiction",
                                     Toast.LENGTH_SHORT).show();
                         }
+                        else
+                        {
+                            Intent intent = new Intent(LoginActivity.this,Dummy.class);
+                            startActivity(intent);
+                        }
+
+                        // ...
                     }
                 });
     }

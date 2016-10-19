@@ -10,4 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.goku.firebasecheck.Dummy">
 
+    <TextView
+        android:text="Hello all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="302dp" />
 </RelativeLayout>
